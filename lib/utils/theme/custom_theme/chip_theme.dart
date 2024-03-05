@@ -11,7 +11,7 @@ class TChipTheme {
     checkmarkColor: Colors.white,
   );
 
-  static ChipThemeData dartChipTheme = const ChipThemeData(
+  static ChipThemeData darkChipTheme = const ChipThemeData(
     disabledColor: Colors.grey,
     labelStyle: TextStyle(color: Colors.white),
     selectedColor: Colors.blue,

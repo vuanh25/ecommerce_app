@@ -35,7 +35,7 @@ class TTextFormFieldTheme {
     ),
   );
 
-  static InputDecorationTheme dartInputDecorationTheme = InputDecorationTheme(
+  static InputDecorationTheme darkInputDecorationTheme = InputDecorationTheme(
     errorMaxLines: 3,
     prefixIconColor: Colors.grey,
     suffixIconColor: Colors.grey,

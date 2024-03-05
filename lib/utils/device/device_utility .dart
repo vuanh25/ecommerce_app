@@ -3,6 +3,8 @@ import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:get/get.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 class TDeviceUtils {
   static void hideKeyboard(BuildContext context) {
@@ -56,15 +58,15 @@ class TDeviceUtils {
     return kToolbarHeight;
   }
 
-  // static double getKeyboardHeight() {
-  //   final viewInsets = MediaQuery.of(Get.context!).viewInsets;
-  //   return viewInsets.bottom;
-  // }
+  static double getKeyboardHeight() {
+    final viewInsets = MediaQuery.of(Get.context!).viewInsets;
+    return viewInsets.bottom;
+  }
 
-  // static Future<bool> isKeyboardVisible() async {
-  //   final viewInsets = View.of(Get.context!).viewInsets;
-  //   return viewInsets.bottom > 0;
-  // }
+  static Future<bool> isKeyboardVisible() async {
+    final viewInsets = View.of(Get.context!).viewInsets;
+    return viewInsets.bottom > 0;
+  }
 
   static Future<bool> isPhysicalDevice() async {
     return defaultTargetPlatform == TargetPlatform.android ||
@@ -109,7 +111,7 @@ class TDeviceUtils {
 
   static void launchUrl(String url) async {
     if (await canLaunchUrlString(url)) {
-      await canLaunchUrlString(url);
+      await launchUrlString(url);
     } else {
       throw 'Could not launch $url';
     }

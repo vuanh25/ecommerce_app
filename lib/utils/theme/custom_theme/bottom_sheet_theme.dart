@@ -11,7 +11,7 @@ class TBottomSheetTheme {
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16.0)),
   );
 
-  static BottomSheetThemeData dartBottomSheetTheme = BottomSheetThemeData(
+  static BottomSheetThemeData darkBottomSheetTheme = BottomSheetThemeData(
     showDragHandle: true,
     backgroundColor: Colors.black,
     modalBackgroundColor: Colors.black,
